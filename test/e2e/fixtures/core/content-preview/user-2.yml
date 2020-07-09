@@ -1,0 +1,19 @@
+- entity: user
+  status: 1
+  uid: 114
+  name: 'e2e-test-2@sdp-ripple.vic.gov.au'
+  mail: 'e2e-test-2@sdp-ripple.vic.gov.au'
+  roles:
+    - '#process':
+        callback: 'reference'
+        args:
+          - 'user_role'
+          - id: 'editor'
+  # Sites.
+  field_user_site:
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: sites
+            name: 'sdp-ripple.vic.gov.au'
